@@ -13,7 +13,6 @@ html {
     height: 100%;
 }
 
-
 button {
     border: 1px solid white;
     padding: 1rem;
@@ -22,7 +21,7 @@ button {
     color: white;
     font-size: 24px;
     transform: scale(1);
-    transition: all .2s ease-in-out;
+    padding: 6px 18px;
 }
 
 button:hover {
@@ -47,7 +46,6 @@ button:hover {
 
 .hero-text {
     font-size: 32px;
-    line-height: 1;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -126,12 +124,12 @@ button:hover {
     }
 
     #hero-subtitle {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     #hero-title{
         line-height: 1.5;
-        font-size: 40px;
+        font-size: 26px;
     }
 
     button {
