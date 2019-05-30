@@ -16,6 +16,43 @@ html {
     overflow: hidden;
 }
 
+a:link,
+a:visited {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.fab {
+    opacity: 0;
+    font-size: 60px;
+    margin: 30px 10px;
+    animation: opacityAnim 1s 6s ease-in forwards;
+}
+
+
+.fab:hover {
+    opacity: 1;
+    animation: fabAnim 0.2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fabAnim {
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes scalingOne {
+    0%,
+    100% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+}
+
 button {
     border: 1px solid white;
     padding: 1rem;
@@ -34,7 +71,8 @@ button:hover {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/main-theme.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/main-theme.jpg');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -66,6 +104,14 @@ button:hover {
     blink-caret .5s step-end infinite;
 }
 
+#arrow {
+    position: absolute;
+    bottom: -35%;
+    left: 48%;
+    animation: scalingOne 1s infinite;
+}
+
+
 #hero-subtitle {
     overflow: hidden;
     opacity: 0;
@@ -78,11 +124,13 @@ button:hover {
 
 #hero-button {
     opacity: 0;
-    animation: opa 1s 6s ease-in;
-    animation-fill-mode: forwards;
+    animation: opacityAnim 1s 6s ease-in;
+    animation: opacityAnim 1s 6s forwards,
+    scalingOne 1.2s 6s infinite;
 }
 
-@keyframes opa {
+
+@keyframes opacityAnim {
     from{ 
         opacity:0;
     } to {
@@ -147,7 +195,7 @@ button:hover {
 
 .about-hero {
     flex: 1;
-    background-image: url("/assets/about-theme.jpg");
+    background-image: url("../../assets/about-theme.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
