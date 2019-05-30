@@ -13,6 +13,7 @@ html {
     height: 100%;
 }
 
+
 button {
     border: 1px solid white;
     padding: 1rem;
@@ -116,5 +117,24 @@ button:hover {
     }
     50% {
         border-color: orange;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    * {
+        font-size: 0.75;
+    }
+
+    #hero-subtitle {
+        font-size: 24px;
+    }
+
+    #hero-title{
+        line-height: 1.5;
+        font-size: 40px;
+    }
+
+    button {
+        font-size: 16px;
     }
 }
