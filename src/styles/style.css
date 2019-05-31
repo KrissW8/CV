@@ -24,12 +24,9 @@ a:visited {
 }
 
 .fab {
-    opacity: 0;
     font-size: 60px;
     margin: 30px 10px;
-    animation: opacityAnim 1s 6s ease-in forwards;
 }
-
 
 .fab:hover {
     opacity: 1;
@@ -104,13 +101,25 @@ button:hover {
     blink-caret .5s step-end infinite;
 }
 
-#arrow {
+#arrow-down {
     position: absolute;
     bottom: -35%;
     left: 48%;
+    font-size: 24px;
     animation: scalingOne 1s infinite;
 }
 
+#arrow-up {
+    top: 2%;
+    position: absolute;
+    font-size: 24px;
+    left: 49%;
+    animation: scalingOne 1s infinite;
+}
+
+#arrow-down:hover, #arrow-up:hover {
+    color: var(--my-yellow);
+}
 
 #hero-subtitle {
     overflow: hidden;
@@ -129,6 +138,9 @@ button:hover {
     scalingOne 1.2s 6s infinite;
 }
 
+#hero-button:hover {
+    color: var(--my-yellow);
+}
 
 @keyframes opacityAnim {
     from{ 
@@ -186,22 +198,58 @@ button:hover {
     button {
         font-size: 16px;
     }
+
+    .fab {
+    font-size: 30px;
+    margin: 20px 8px;
+}
 }
 
-.about-me {
-    display: flex;
-    
+#about-me {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    height: 100%;
 }
 
 .about-hero {
-    flex: 1;
-    background-image: url("../../assets/about-theme.jpg");
+    grid-area: 1 / 1 / 2 / 1;
+    background: black;
+    justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+#about-content {
+    grid-area: 2 / 1 / 10 / 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    background: white;
+}
 
+.left-about-content {
+    grid-area: 1 / 1 / 1 / 2;
+    background: green;
+}
+
+.middle-about-content {
+    grid-area: 1 / 2 / 1 / 5;
+    background: blue;
+}
+
+.right-about-content {
+    grid-area: 1 / 5 / 1 / 6;
+    background: yellow;
+}
+
+#about-footer {
+    grid-area: 10 / 1 / 11 / 1;
+    background: black;
+
+}
 .inner-container::-webkit-scrollbar {
   display: none;
 }

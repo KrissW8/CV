@@ -9,7 +9,7 @@
 </head>
 <body>
     <container class="outer-container">
-        <div class="hero-image">
+        <div id="hero" class="hero-image">
             <div class="hero-text">
                 <a href="https://www.facebook.com/krystian.waskowski"><i class="fab fa-facebook-square"></i></a>
                 <a href="https://www.instagram.com/kriss_w8"><i class="fab fa-instagram"></i></a>
@@ -19,24 +19,39 @@
                 <h1 id="hero-title">Krystian Waśkowski</h1>
                 <p id="hero-subtitle">junior frontend developer</p>
                 <div id="about-button">
-                    <button id="hero-button" class="about-button"><a href="#targetname">About me</a></button>
+                    <button id="hero-button" class="about-button"><a href="#about-me">About me</a></button>
                 </div>
                 <span></span>
-                <a href="#targetname"><i id="arrow" class="fas fa-chevron-down"></i></a>
+                <a href="#about-me"><i id="arrow-down" class="fas fa-chevron-down"></i></a>
             </div>
      
         </div>
     </container>
  
-    <div name="about-me" class="about-me">
-        <div>
-            <a name="targetname"></a>
-            <header class="about-hero">
-                <p data-aos="zoom-in" >About me: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus repudiandae suscipit quidem consequatur vitae sed amet quam alias nesciunt temporibus voluptatum laborum assumenda dolorum, obcaecati sit saepe eum ullam est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis asperiores beatae accusantium unde quaerat molestiae sunt. Minima eum velit quos possimus iure earum, asperiores doloremque ratione voluptas ut tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et impedit est perferendis incidunt eum illo rem. Quas error nam minima dignissimos consequuntur excepturi animi totam, eum soluta voluptatum quidem est!</p>
-            </header>
-             <i class="fab fa-twitter-square">xddd</i>
+    <div id="about-me" class="grid-container">
+        <div class="about-hero">
+            <a href="#hero"><i id="arrow-up" class="fas fa-chevron-up"></i></a>
         </div>
-    <div>
+        <content id="about-content">
+            <div class="left-about-content">
+                <p>About me: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus repudiandae
+                suscipit quidem consequatur vitae sed amet quam alias nesciunt temporibus voluptatum laborum assumenda dolorum,
+                obcaecati sit saepe eum ullam est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis
+                asperiores beatae accusantium unde quaerat molestiae sunt. Minima eum velit quos possimus iure earum, asperiores
+                doloremque ratione voluptas ut tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et impedit est
+                perferendis incidunt eum illo rem. Quas error nam minima dignissimos consequuntur excepturi animi totam, eum soluta
+                voluptatum quidem est!</p>
+            </div>
+            <div class="middle-about-content">
+
+            </div>
+            <div class="right-about-content">
+                
+            </div>
+        </content>
+        <footer id="about-footer">
+        </footer>
+    </div>
 
     <script src="https://kit.fontawesome.com/d804c48578.js"></script>
     <script src="./src/scripts/index.js"></script>
