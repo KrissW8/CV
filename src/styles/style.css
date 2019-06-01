@@ -216,33 +216,35 @@ button:hover {
 .about-hero {
     grid-area: 1 / 1 / 2 / 1;
     background: black;
-    justify-content: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    -webkit-box-shadow: 50px 50px 55px 50px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 50px 50px 55px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 50px 50px 55px 50px rgba(0, 0, 0, 0.5);
 }
 
 #about-content {
+    padding-top: 10px;
     grid-area: 2 / 1 / 10 / 1;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr;
     background: white;
 }
 
 .left-about-content {
-    grid-area: 1 / 1 / 1 / 2;
-    background: green;
+    grid-area: 1 / 1 / 1 / 4;
 }
 
 .middle-about-content {
-    grid-area: 1 / 2 / 1 / 5;
-    background: blue;
+    grid-area: 1 / 4 / 1 / 6;
+}
+
+.middle-about-content > img {
+    border: 4px solid black;
 }
 
 .right-about-content {
-    grid-area: 1 / 5 / 1 / 6;
-    background: yellow;
+    grid-area: 1 / 6 / 1 / 9;
+
 }
 
 #about-footer {
